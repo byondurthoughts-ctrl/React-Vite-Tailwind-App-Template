@@ -14,7 +14,7 @@ export default function SkincareWebsite() {
       rating: 4.8,
       gradient: "from-amber-200 to-orange-300",
       emoji: "✨",
-      image: "/p1.jpg" // 👈 ADDED IMAGE PATH
+      image: "/p1.jpg" // Image for Product 1
     },
     {
       id: 2,
@@ -23,7 +23,8 @@ export default function SkincareWebsite() {
       price: 38.00,
       rating: 4.9,
       gradient: "from-blue-200 to-purple-300",
-      emoji: "🌙"
+      emoji: "🌙",
+      image: "/p2.jpg" // Image for Product 2
     },
     {
       id: 3,
@@ -174,7 +175,7 @@ export default function SkincareWebsite() {
                 key={product.id}
                 className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-3 group"
               >
-                {/* Product Image/Gradient Container - Modified to include image check */}
+                {/* Product Image/Gradient Container - Logic checks for product.image */}
                 <div className={`h-64 ${!product.image ? `bg-gradient-to-br ${product.gradient}` : 'bg-gray-100'} flex items-center justify-center relative overflow-hidden`}>
                   <button
                     onClick={() => toggleFavorite(product.id)}
