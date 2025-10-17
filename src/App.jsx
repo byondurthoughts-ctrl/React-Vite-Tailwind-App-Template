@@ -5,6 +5,8 @@ export default function SkincareWebsite() {
   const [mobileMenu, setMobileMenu] = useState(false);
   const [favorites, setFavorites] = useState([]);
 
+  // ⚠️ NOTE: Ensure you have p1.jpg, p2.jpg, and p3.jpg files
+  // in your project's 'public' folder before deploying.
   const products = [
     {
       id: 1,
@@ -14,7 +16,7 @@ export default function SkincareWebsite() {
       rating: 4.8,
       gradient: "from-amber-200 to-orange-300",
       emoji: "✨",
-      image: "/p1.jpg" // Image for Product 1
+      image: "/p1.jpg" // Image for Product 1 (Vitamin C)
     },
     {
       id: 2,
@@ -24,7 +26,7 @@ export default function SkincareWebsite() {
       rating: 4.9,
       gradient: "from-blue-200 to-purple-300",
       emoji: "🌙",
-      image: "/p2.jpg" // Image for Product 2
+      image: "/p2.jpg" // Image for Product 2 (Night Cream)
     },
     {
       id: 3,
@@ -33,7 +35,8 @@ export default function SkincareWebsite() {
       price: 28.00,
       rating: 4.7,
       gradient: "from-pink-200 to-rose-300",
-      emoji: "💧"
+      emoji: "💧",
+      image: "/p3.jpg" // Image for Product 3 (Cleansing Foam)
     },
     {
       id: 4,
@@ -273,6 +276,7 @@ export default function SkincareWebsite() {
             © 2025 Radiant Glow. All rights reserved.
           </p>
         </div>
+        <div className="h-10"></div> {/* Spacer for fixed header/footer if needed, usually unnecessary here */}
       </footer>
     </div>
   );
